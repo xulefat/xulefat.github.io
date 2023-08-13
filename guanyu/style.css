@@ -1,7 +1,7 @@
 html{height: 100%;
     
 }
-body{font-size: 102%;
+body{font-size: 150%;
   height: 100%;
  
   display: block;
@@ -24,6 +24,7 @@ a:visited {color: #8e3200;}  /* 已访问链接 */
 
 .secondary_directory{position:relative;
                      left:20px;
+                     width: 96%;
               }       
 #main {padding: 0px 0em 36px;
   }
@@ -35,6 +36,7 @@ a:visited {color: #8e3200;}  /* 已访问链接 */
   hr{
     border-top: 1px dashed;
   }
+
 .copy-right{
   font-size: small;
   color: rgb(145, 145, 145);

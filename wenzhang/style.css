@@ -1,0 +1,39 @@
+html{height: 100%;
+}
+body{font-size: 102%;
+  height: 100%;
+  display: block;
+  margin: 22px 8px 10px 16px;
+  word-wrap:break-word;
+  word-break: break-all;
+}
+
+a:link {color: #8e3200;}      /* 未访问链接*/
+a:visited {color: #8e3200;}  /* 已访问链接 */
+
+.this{color: rgb(60, 125, 134);}
+.next{color: rgb(145, 145, 145);}
+
+#container {height:auto;
+        min-height:100%;
+        position: relative;
+       }
+.secondary_directory{position:relative;
+                 left:20px;
+                       }
+                       
+#main {padding: 0px 0em 36px;
+  }
+#footer {text-align:center;
+    position: absolute;
+    bottom:0;
+    width: 100%;
+    }
+hr{
+  border-top: 1px dashed;
+  }    
+.copy-right{
+  font-size: small;
+  color: rgb(145, 145, 145);
+        margin:0px
+        }

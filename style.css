@@ -3,7 +3,7 @@ html{height: 100%;
 body{font-size: 135%;
  height: 100%;
  display: block;
- margin: 210px 8px 10px 16px;
+ margin: 0px 8px 10px 16px;
  word-wrap:break-word;
   word-break: break-all;
   background-image:url(/images/背景图.png) ;
@@ -27,10 +27,10 @@ a:visited {color: #8e3200;}  /* 已访问链接 */
 .secondary_directory{position:relative;
     left:20px;
     width: 96%;}
-.secondary_directory-contai{
-      font-size: medium;
-      color: rgb(0, 0, 0);
-    }
+          .secondary_directory-contai{
+                font-size: medium;
+                color: rgb(0, 0, 0);
+              }
 #footer {text-align:center;
     position: absolute;
     bottom:0;
@@ -40,7 +40,7 @@ hr{
       border-top: 1px dashed;
   }  
 #position-and-site-name{
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 }
 #touxiang{
   height: 28.8px;

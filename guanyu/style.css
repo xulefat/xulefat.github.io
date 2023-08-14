@@ -1,15 +1,15 @@
 html{height: 100%;
     
 }
-body{font-size: 150%;
+body{font-size: 135%;
   height: 100%;
- 
   display: block;
-  margin: 22px 8px 10px 16px;
+  margin: 0px 8px 10px 16px;
   word-wrap:break-word;
-  word-break: break-all;
-
-}
+   word-break: break-all;
+   background-image:url(/images/背景图.png) ;
+   
+ }
  
 a:link {color: #8e3200;}      /* 未访问链接*/
 a:visited {color: #8e3200;}  /* 已访问链接 */
@@ -41,4 +41,9 @@ a:visited {color: #8e3200;}  /* 已访问链接 */
   font-size: small;
   color: rgb(145, 145, 145);
         margin:0px
+        }
+        #position{font-size: small;
+          color:gray;}
+        #position-and-site-name{
+          margin-bottom: 6px;
         }

@@ -3,9 +3,11 @@ html{height: 100%;
 body{font-size: 135%;
  height: 100%;
  display: block;
- margin: 22px 8px 10px 16px;
+ margin: 210px 8px 10px 16px;
  word-wrap:break-word;
   word-break: break-all;
+  background-image:url(/images/背景图.png) ;
+  
 }
 
 a:link {color: #8e3200;}      /* 未访问链接*/
@@ -37,6 +39,9 @@ a:visited {color: #8e3200;}  /* 已访问链接 */
 hr{
       border-top: 1px dashed;
   }  
+#position-and-site-name{
+  margin-bottom: 8px;
+}
 #touxiang{
   height: 28.8px;
 }   

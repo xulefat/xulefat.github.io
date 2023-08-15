@@ -6,18 +6,18 @@ body{font-size: 135%;
  margin: 0px 8px 0px 16px;
  word-wrap:break-word;
   word-break: break-all;
-  background-image:url(/images/背景3.png) ;
+  background-image:url(/images/背景4.png) ;
   background-color: #f1f2f3;
 }
 
-/*a:link {color: #8e3200;}      /* 未访问链接*/
-/*a:visited {color: #8e3200;}  /* 已访问链接 */
-/*a:link {color: #8e3200;}      /* 未访问链接*/
-a:visited {color: #0000ee;text-decoration:none;} 
-a:link {color: #0000ee;text-decoration:none;} 
+/*a:link {color: #8e3200;text-decoration:none;}      /* 未访问链接*/
+/*a:visited {color: #8e3200;text-decoration:none;}  /* 已访问链接 */
+/*a:link {color: #8e3200;text-decoration:none;}      /* 未访问链接*/
+a:visited {color: #0000ee;text-decoration:none;} */
+a:link {color: #0000ee;text-decoration:none;} */
 .this{color: rgb(145, 145, 145);}
 .next{color: rgb(145, 145, 145);}
-#position{font-size: small;
+#position{font-size: x-small;
           color:gray;}
 #container {height:auto;
         min-height:100%;
@@ -25,13 +25,18 @@ a:link {color: #0000ee;text-decoration:none;}
        }
 
 #main {padding: 0px 0em 36px;
+  
   }
+  .first_directory{position:relative;
+    left:100px;
+    width: 70%;}
+
 .secondary_directory{position:relative;
-    left:20px;
-    width: 96%;}
+    left:11px;
+    width: 90%;}
           .secondary_directory-contai{
                 font-size: medium;
-                color: rgb(0, 0, 0);
+                color: #0000ee;
               }
 #footer {text-align:center;
     position: absolute;
@@ -45,17 +50,59 @@ hr{
   margin-bottom: 6px;
 }
 #touxiang{
-  height: 28.8px;
+  position:relative;
+    left:155px;
+    
+  height: 40px;
+  width: 50px;
 }   
 .copy-right{
   font-size: small;
   color:rgb(145, 145, 145);
         margin:0px
         }
-        details{color: #000000;}
-        #touxiang{margin-top:4px ;
+details{color: #0000ee;}
+ #touxiang{margin-top:4px ;
   margin-bottom: 4px;}
-  #site-name{color: #0000ee;
+
+ #heng{
+  width: 100px;
+  height: 29px;
+  position:relative;
+  left:14px;
+  top: 30px;
+
+}
+#shu{
+  width: 100px;
+  height: 29px;
+  position:relative;
+    left:40px;
+    top: 20px;
+  
+}
+
+.shuilongtou{position:relative;
+  left:140px;
+  width: 70%;
+  list-style: none;
+
+}
+
+
+#out{position:relative;
+  left:140px;
+  width: 70%;
+  color: #0000ee;
+
+}
+#outi{position:relative;
+  left:122px;
+  width: 70%;
+  color: #0000ee;
+
+}
+    /* #site-name{color: #0000ee;
 
   }
  

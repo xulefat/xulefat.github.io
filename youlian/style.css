@@ -9,9 +9,9 @@ body{font-size: 135%;
    background-image:url(/images/背景图.png) ;
    
  }
-
-a:link {color: #8e3200;}      /* 未访问链接*/
-a:visited {color: #8e3200;}  /* 已访问链接 */
+ a:visited {color: #0000ee;text-decoration:none;} 
+a:link {color: #0000ee;text-decoration:none;}      /* 未访问链接*/
+/* a:visited {color: #8e3200;}  /* 已访问链接 */
 #position{font-size: small;
   color:gray;}
 .this{color: rgb(60, 125, 134);}
@@ -45,3 +45,9 @@ hr{
         #position-and-site-name{
           margin-bottom: 6px;
         }
+        #touxiang{margin-top:4px ;
+          margin-bottom: 4px;}
+          #site-name{color: #0000ee;
+        
+          }
+         

@@ -3,16 +3,18 @@ html{height: 100%;
 body{font-size: 135%;
  height: 100%;
  display: block;
- margin: 0px 8px 10px 16px;
+ margin: 0px 8px 0px 16px;
  word-wrap:break-word;
   word-break: break-all;
-  background-image:url(/images/背景图.png) ;
-  
+  background-image:url(/images/背景3.png) ;
+  background-color: #f1f2f3;
 }
 
-a:link {color: #8e3200;}      /* 未访问链接*/
-a:visited {color: #8e3200;}  /* 已访问链接 */
-
+/*a:link {color: #8e3200;}      /* 未访问链接*/
+/*a:visited {color: #8e3200;}  /* 已访问链接 */
+/*a:link {color: #8e3200;}      /* 未访问链接*/
+a:visited {color: #0000ee;text-decoration:none;} 
+a:link {color: #0000ee;text-decoration:none;} 
 .this{color: rgb(145, 145, 145);}
 .next{color: rgb(145, 145, 145);}
 #position{font-size: small;
@@ -50,4 +52,12 @@ hr{
   color:rgb(145, 145, 145);
         margin:0px
         }
-details{color: gray;}
+        details{color: #000000;}
+        #touxiang{margin-top:4px ;
+  margin-bottom: 4px;}
+  #site-name{color: #0000ee;
+
+  }
+ 
+        
+        

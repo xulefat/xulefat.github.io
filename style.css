@@ -17,8 +17,8 @@ a:visited {color: #0000ee;text-decoration:none;} */
 a:link {color: #0000ee;text-decoration:none;} */
 .this{color: rgb(145, 145, 145);}
 .next{color: rgb(145, 145, 145);}
-#position{font-size: x-small;
-          color:gray;}
+#position{font-size: small;
+          color:rgb(145, 145, 145);}
 #container {height:auto;
         min-height:100%;
         position: relative;
@@ -70,15 +70,24 @@ details{color: #0000ee;}
   height: 29px;
   position:relative;
   left:14px;
-  top: 30px;
+  top: 46px;
 
 }
 #shu{
   width: 100px;
   height: 29px;
+  position:absolute;
+    left:27px;
+    top: 10px;
+  
+}
+
+#shutwo{
+  width: 100px;
+  height: 29px;
   position:relative;
     left:40px;
-    top: 20px;
+    top: 10px;
   
 }
 

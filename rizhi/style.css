@@ -11,13 +11,19 @@ body{font-size: 102%;
 /*a:visited {color: #8e3200;}  /* 已访问链接 */
 a:visited {color: #0000ee;text-decoration:none;} */
 a:link {color: #0000ee;text-decoration:none;} */
-.postmate{font-size: small;
-          color:gray;
-          margin-bottom: 50px;
+
           
+
+
+#posttitle{
+    margin-bottom: 5px;
 }
-#position{font-size: small;
-    color:rgb(145, 145, 145);}
+#postmate{
+    color: rgb(145, 145, 145);
+    margin-top: 0px;
+    font-size: x-small;
+}
+
 #container {height:auto;
     min-height:100%;
     position: relative;
@@ -29,6 +35,7 @@ a:link {color: #0000ee;text-decoration:none;} */
 
 #main {padding: 0px 0em 36px;
 }
+
 
 
 .quote{color: rgb(145, 145, 145);
@@ -53,6 +60,8 @@ hr{
     color: rgb(145, 145, 145);
         margin:0px
         }
+
+
 
 
 

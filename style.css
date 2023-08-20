@@ -33,8 +33,11 @@ a:link {color: #0000ee;text-decoration:none;} */
     width: 70%;}
 
 .secondary_directory{position:relative;
-    left:11px;
+    left:15px;
     width: 90%;}
+.san_directory{position:relative;
+      left:15px;
+      width: 90%;}
           .secondary_directory-contai{
                 font-size: medium;
                 color: #0000ee;

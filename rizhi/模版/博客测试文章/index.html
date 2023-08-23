@@ -6,6 +6,11 @@
         <title>徐乐.博客</title>
         <link rel="icon" href="/siteicon.png" sizes="16x16">
         <link rel="stylesheet" type="text/css" href="/rizhi/style.css">
+
+        <link href="https://cdn.bootcss.com/highlight.js/9.12.0/styles/atom-one-dark.min.css" rel="stylesheet">
+         <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+         <script >hljs.initHighlightingOnLoad();</script> 
+         
     </head>
     <body>
         <div id="container">
@@ -87,8 +92,8 @@
                         </p>
 
 
-                        <h2 class="postcontain-first">二、图片</h2>
-                        <h3 class="postcontain-second">1、图片放在image</h3>
+                        <h2 class="postcontain-first">二、引用</h2>
+                       
                         <p class="postcontain-contain">
                             <blockquote class="quote" >
                                 使用blockquote标签进行引用(用html做出markdown中的区块效果),对blackquote
@@ -97,6 +102,27 @@
                                 注意:在盒子中,是无法给padding加上颜色的。但是可以给border加上颜色。
                             </blockquote>
                         </p>
+
+                        <h2 class="postcontain-first">二、代码</h2>
+                      
+                        <p class="postcontain-contain">
+                            <pre><code>
+                                ├── _config.yml  主题配置文件
+                                ├── languages    语言件夹
+                                ├── layout       布局文件夹
+                                ├── scripts      脚本文件夹
+                                └── source       资源文件夹 
+                                      </code></pre>
+
+                                      <pre><code>
+&lt;div&gt;
+&lt;body&gt;<%- body %>&lt;/body&gt;
+                                
+&lt;/div&gt;
+                                              </code></pre>                                    
+                             
+                        </p>
+
         
         
         

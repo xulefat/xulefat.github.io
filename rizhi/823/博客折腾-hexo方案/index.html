@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>徐乐.博客</title>
+        <link rel="icon" href="/siteicon.png" sizes="16x16">
+        <link rel="stylesheet" type="text/css" href="/rizhi/style.css">
+
+        <link href="https://cdn.bootcss.com/highlight.js/9.12.0/styles/atom-one-dark.min.css" rel="stylesheet">
+        <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+        <script >hljs.initHighlightingOnLoad();</script> 
+
+    </head>
+    <body>
+        <div id="container">
+            <div id="header">
+                <p id="position-and-site-name"><span id="site-name">徐乐.博客</span><span style="font-size: x-small;color:rgb(145, 145, 145);">&thinsp;&thinsp;|&thinsp;位置:详情页</span></p>
+                <a class="navigation-bar" href="/">首页</a>
+                <a class="navigation-bar" href="/wenzhang">文章</a>
+                <a class="navigation-bar" href="/guanyu">关于</a>
+                <a class="navigation-bar" href="/youlian">友链</a>
+                </div>
+            <div id="main">
+               
+                <h1 id="posttitle" style=" margin-bottom: 5px;">博客折腾（2）hexo方案</h1>
+ <span id="postmate"><span>日期:23/8/23|字数:6919个字符</span></span>    
+
+ 
+                           
+                         <h2 class="postcontain-first">1、hexo入门</h2>
+
+                             <h3 class="postcontain-second">1.1、hexo是什么？</h3>
+ <P class="postcontain-contain">  hexo是一个博客静态博客生成器。</br>
+它没有后台，你可以把hexo安装在本地计算机，通过在指定文件夹输入hexo命令<code><pre>  hexo init</code></pre>  生成一个网站程序，并且可以在本地对生成的网站程序进行调试，满意之后，再把它部署到github或者云服务器。此网站程序很适合用来写博客。</P>
+
+  <h3 class="postcontain-second">1.2，hexo安装和使用</h3>
+ <P class="postcontain-contain"> hexo的使用需要node.js和git环境，所以我们需要先安装node.js和git，再安装hexo。</P>
+
+
+  
+  <h3 class="postcontain-second"> 1.3，安装node.js</h3>
+ <P class="postcontain-contain">  去node.js官网，下载node.js安装包，点开下载的安装程序，一般来说无脑下一步行了。。</P>
+
+
+
+  <h3 class="postcontain-second">1.4，安装git</h3>
+ <P class="postcontain-contain"> 去git官网，下载git安装包，点开下载的安装程序，一般来说无脑下一步就行。安装完git，右击鼠标会新增git-bash-here选项，点击即可在点击时的位置进入git命令行。</P>
+
+
+  
+
+
+
+
+  <h3 class="postcontain-second">1.5、我对node.js和git的安装和环境变量的配置</h3>
+ <P class="postcontain-contain">  我的做法：我并没有主动去配置环境变量。我是分了一个新的盘符，把node.js和git都安装在新盘符F中，我打开高级系统设置-环境变量-系统变量-path发现，已经有了node.js和git的环境变量了。</P>
+
+
+
+  <h3 class="postcontain-second">1.6、安装hexo</h3>
+ <P class="postcontain-contain">  为了使所有文件夹都可以用到hexo，我们要选择全局安装hexo。首先随便找个位置打开git命令行，然后输入输入命令<code><pre>  npm install -g hexo-cli</code></pre>  全局安装hexo。在git命令行或者cmd输入命令<code><pre>  hexo -v</code></pre>  查看hexo版本，出现版本号即安装成功。</P>
+
+
+  <h3 class="postcontain-second">1.7使用hexo-初始化（生成）博客程序</h3>
+ <P class="postcontain-contain"> 输入命令<code><pre>  hexo init</code></pre>  初始化命令（用来生成网站程序。），初始化成功后就可以看见博客文件夹myblog有了一堆文件了。然后在git命令行输入命令<code><pre>  hexo s</code></pre>  开启本地服务器，打开本地计算机的浏览器输入“localhost：4000”，看到有页面，说明成功使用hexo生成了一个网站程序。</br>
+到这里，我们已经得到了一个网站程序了。</br>
+打开博客文件夹会发现网站程序根目录下，有以下文件。</br>
+其中config.yml为网站程序配置文件，souce为站点资源存放文件。</br>
+点开theme然后点进去主题文件夹会看到一个config.yml文件，这里的是网站程序主题配置文件。</P>
+
+
+  <h3 class="postcontain-second">1.8、我安装hexo并初始化化博客程序的操作</h3>
+ <P class="postcontain-contain">  我的做法：我是在安装node.js和git的那个新盘符F中新建文件夹blog（可以随意命名），然后又在blog中新建文件夹myblog（可以随意命名）做为博客文件夹，然后打开myblog，在此位置进入git命令行（在其他地方打开git命令行也可以，记得将位置cd到博客文件夹就行）。然后输入命令<code><pre>  npm install -g hexo-cli</code></pre>  安装hexo，然后在cmd中输入命令<code><pre>  hexo -v</code></pre>  查看hexo版本和是否安装成功。然后回到git命令行，cd到博客文件夹myblog，输入命令<code><pre>  hexo init</code></pre>  初始化博客，初始化成功后就可以看见博客文件夹myblog有了一堆文件了。然后在git命令行输入命令<code><pre>  hexo s</code></pre>  ，打开本地计算机的浏览器输入“localhost：4000”，看到此页面，说明成功安装hexo并用hexo生成了一个网站程序。</P>
+
+
+  <h3 class="postcontain-second">1.9使用hexo生成的网站程序-基本hexo命令</h3>
+ <P class="postcontain-contain"> <code><pre>  hexo s</code></pre>  用来开启本地服务器，之后可以在本机浏览器输入localhost：4000对博客程序进行调试。</br>
+端口可使用命令`hexo server -p 端口号`指定端口，访问`http://localhost: 端口号`</br>
+<code><pre>  hexo new "文章名字"</code></pre>  用来在本地生成博客文章。生成的文章放在网站程序根目录souce/_posts下。</br>
+<code><pre>  hexo g</code></pre>  在网站程序根目录下生成public文件夹。</br>
+<code><pre>  hexo c</code></pre>  把网站程序根目录的pubilc文件夹删除。</br>
+<code><pre>  hexo d</code></pre>  将网站程序同步到相应的空间（其实是把public文件夹上传到空间）。hexo d之前应该先依次执行`hexo c`，`hexo g`，`hexo s`，然后去浏览器打开localhost：4000看看有没有出错。</P>
+
+
+  <h3 class="postcontain-second">1.10、其他操作和注意事项</h3>
+ <P class="postcontain-contain">  hexo生成的网站程序的文章使用md语法，它会把md文件转换为html文件。</br>
+如果想生成文章，也可以直接把md文件放到网站程序根目录的souce/_posts下面。</br>
+想要删除谋篇文章，直接到网站程序根目录的souce/_posts下面找到该文章，然后直接删除就行。</br>
+想要更换主题，去hexo官网或者github将hexo主题下载下来，然后将下载的整个hexo主题文件夹复制到网站程序根目录的theme/下面，然后到站点配置文件config.yml中将theme配置改成新的主题文件夹的名字就行了。</br>
+主题美化可以上网搜教程，教程很多。</br>
+hexo的命令要在博客文件夹中打开git命令行，再从git命令行中输入hexo命令。</br>
+安装hexo不成功，可以输入命令`npm  install hexo-cli -g --registry=http://registry.npmmirror.com`代替原来的安装命令进行安装。</br>
+hexo生成的博客程序生成的文章的本地图片都存放在网站程序根目录的souce/_images下面（没有此文件夹就新建一个）。并采用“images/文件名.后缀”路径引入。</br>
+如果不喜欢现有的主题，可以自己写一个主题。</br>
+修改网站程序主题配置文件在本地是实时生效的，不用按住ctrl＋c退出当前命令后`hexo s`在本地重启服务器。</br>
+hexo init出现以下提示</br>
+Cloning hexo-starter https://github.com/hexojs/hexo-starter.git E:/blog test2/.git: Permission denied</br>
+原因：是你当前用户在该文件夹没有管理员权限。</br>
+解决办法：把整个盘符的的权限对该用户开放。盘符-属性-安全-把该盘符的权限开放给everyone（所有用户）就行。</P>
+
+
+  <h3 class="postcontain-second">2、小结</h3>
+ <P class="postcontain-contain">  经过安装hexo，用hexo生成了网站程序，知道hexo生成的网站程序如何使用，在本地调试满意（主题的更换，编写和美化，文章的编写和删除。）后，通过命令`hexo d`将网站程序同步更新到准备好的空间。即可得到一个独立博客网站。</P>
+
+ <h2 class="postcontain-first">3、hexo博客主题开发</h2>
+ <P class="postcontain-contain">  hexo官网有提供一些网友贡献的主题，如果觉得适合，那可以跳过本节。</P>
+ <h3 class="postcontain-second">3.1、为什么想要自己开发一个主题？</h3>
+<P class="postcontain-contain">  有很多原因，但是最重要的原因是——我觉得当你看到你博客的主题跟很多人重样了，这时你应该考虑一下自己去写一个主题。</P>
+
+<h3 class="postcontain-second">3.2，如何写一个hexo博客主题</h3>
+<P class="postcontain-contain"> 基于我的经验，总结如下。</br>
+前提是你学过“前端三剑客”。简单了解ejs。</br>
+首先要知道hexo博客主题的文件结构，知道如何新建一个主题并切换主题。</br>
+然后才是按照你的想法，编写你的主题。</br></P>
+<h3 class="postcontain-second">3.3 hexo博客程序主题的文件结构</h3>
+<P class="postcontain-contain">一般来说文件结构如下图
+    <pre><code>
+├── _config.yml  主题配置文件
+├── languages    语言件夹
+├── layout       布局文件夹
+├── scripts      脚本文件夹
+└── source       资源文件夹 
+</code></pre>  
+其中，我的hexo网站程序主题的文件结构如下图</br>
+<pre><code>
+└──  layou      
+├── layout.ejs          
+├── index.ejs
+├── archive.ejs
+└── post.ejs
+</code></pre>  
+简单看来，把layout写好了，就能用了，其他文件夹为空也无所谓。</br></P>
+
+
+
+<h3 class="postcontain-second"> 3.4， 如何新建一个主题并切换主题？</h3>
+<P class="postcontain-contain">  先新建一个博客文件夹，再进去该博客文件夹新建一个hexo网站程序，因为我们要本地对这个网站程序操作，方便看到调试。</br>
+进入新建的网站程序，点进去theme文件夹，在里面新建一个文件夹命名为test（随便命名），test就是你的主题文件夹。成功新建一个主题。</br>
+然后到网站程序根目录的cofig.yml把`theme: landscape`改成`theme：test`。成功切换到新建的主题。</br>
+</P>
+
+
+
+<h3 class="postcontain-second">3.5，编写主题</h3>
+<P class="postcontain-contain"> 首先进入test新建所有文件夹（languages，layout，scripts，source）和config.yml文件。</br>
+因为我的主题除了layout文件夹之外没有用到其他文件夹，所以其他文件夹空着。</br>
+我把css也写再了layout.ejs里面。</br>
+layout.ejs是总体布局，它的内容在网站所有页面都会出现，在哪里都能看见，网站展示的所有页面是layout.ejs文件的内容。它内容结构如下。</br>
+<pre><code>     
+    &lt;!DOCTYPE html>  
+    &lt;html>  
+    &lt;body><%- body %> &lt;/body>  
+    &lt;/html>
+</code></pre>  
+和html文件的格式一样，其中`<%- body %>`会引入其他文件的内容，进入网站会默认引入index.ejs的内容。</br>
+为了方便（因为我的css不多），我主题所有css都写在layout.ejs上。</br>
+我先把网站标题，导航栏，页脚写好，因为这三个是在网站哪里都能看见的，所有要把这三的内容写在layout上。</br>
+<pre><code>
+    &lt;body>
+    &lt;h1>博客名
+    &lt;/h1>
+         &lt;h3 id="dhl">
+            &lt;a href="/">[站点首页]</a>
+            &lt;a href="<%-url_for(config.archive_dir)%>">[日志列表]</a>
+        &lt;/h3>
+        &lt;br />
+        &lt;p>
+    <%- body %>
+    &lt;/p>
+    &lt;p>&lt;HR> &lt;/p>       /*hr标签是分割线*/
+    &lt;p>本博客power by hexo,theme by test. &lt;/p>
+&lt;/body>
+</code></pre>  
+其他页面会引入到`<%- body %>`中，所有写其他页面就不用写头文件了，直接用html写就完事了，在index.ejs中用html写出你喜欢的首页，在archive.ejs中写你想展示的内容，我想在这里展示所有文章的集合，所以至少要写入获取所有文章的代码。</br>
+<pre><code><% page.posts.each(post=>{ %>
+        <%- date( post.date , 'YYYY/MM/DD') %> -
+            &lt;a href="<%=url_for(post.path)%>">
+                [ <%= post.title %> ]
+            &lt;/a>
+            &lt;/br>
+    <% }) %>
+</code></pre>  
+点击`<a href="<%-url_for(config.archive_dir)%>">[日志列表]</a>`，会让layout.ejs中的`<%- body %>`会获取到archive.ejs的内容，想要增加其他导航栏的菜单内容，如此类推。</br>
+点击博客文章链接会让layout.ejs中的`<%- body %>`会获取到post.ejs的内容，以至少要在post.ejs中写入代码` <%- page.content %> /*此代码用来获取文章具体内容*/`</br>
+ok，然后你就可以在layout.ejs中写入css把样式改成喜欢的样式了。</br>
+</P>
+
+<h2 class="postcontain-first">4、小结</h2>
+<P class="postcontain-contain">这样就简单地知道开发hexo主题的一个思路了。  </P>
+
+
+<h2 class="postcontain-first">5、部署到空间+域名解析</h2>
+
+<h3 class="postcontain-second">5.1、hexo网站程序部署到github</h3>
+<P class="postcontain-contain">  前提是你要有一个github账户，去注册一个就行。</br>
+先在github上创建一个仓库，然后在本地用git将博客文件夹绑定github账户，在本地安装`hexo d`命令，修改站点的config.yml文件的url和deploy部分，设置免密推送。</P>
+
+<h3 class="postcontain-second">5.2，建立一个仓库</h3>
+<P class="postcontain-contain"> 注意，仓库名字格式得是“你的github用户名+github.io”</P>
+<h3 class="postcontain-second">4.3将博客文件夹绑定github</h3>
+<P class="postcontain-contain">打开git命令行，cd进博客文件夹，依次输入命令 `git config --global user.name "用户名"`,` git config --global user.email "你的登陆邮箱"`,
+你可以在博客文件夹输入命令`“git config user.name”`,查看用户名是否输入正确。 输入命令`git config user.email`查看邮箱是否正确。</P>
+
+
+
+<h3 class="postcontain-second"> 5.4，安装hexo d命令</h3>
+<P class="postcontain-contain">  打开git命令行，cd到博客文件夹然后输入命令`npm install hexo-deployer-git --save`安装hexo d命令。
+
+</P>
+
+
+
+<h3 class="postcontain-second">5.5，修改站点config.yml文件</h3>
+<P class="postcontain-contain"> 将博客文件夹根目录下的config.yml文件的deploy部分改成</br>
+    <pre><code>
+deploy:
+  type: git
+  repository: https://github.com/用户名/用户名.github.io.git
+  branch: main
+</code></pre>  
+其中`https://github.com/用户名/用户名.github.io.git`是你的仓库代码地址，`branch: main`如果默认不是main的话，去仓库设置那里改成main就行。</br>
+然后将博客文件夹根目录下的config.yml文件的url部分添加代码</br>
+<pre><code>
+url: https://github.com/用户名/用户名.github.io
+root: /
+</code></pre>  
+此时，在博客文件夹打卡git命令行，输入命令`hexo d`就可以啊网站程序推到github上了，在浏览器输入用户名`github.io`就可以访问到你的博客网站了。</br>
+</P>
+
+<h3 class="postcontain-second">5.6、设置免密推送</h3>
+<P class="postcontain-contain">输入命令`ssh-keygen -t rsa -C 你的邮箱`生成获取公钥和秘钥并得知路径，把公钥的内容复制，然后进入仓库，点击头像-setting-ssh and gpg key-new ssh key，把复制的内容填进去key里面就行，title随便起。</P>
+
+
+
+
+
+
+
+
+
+
+<h3 class="postcontain-second">5.7、 给hexo+github自定义域名</h3>
+<P class="postcontain-contain">  先去买个域名，然后把域名解析到"用户名.github.io"。</br>
+然后在本地博客文件夹根目录的souce下添加一个没有后缀且名字为CNAME的文件，内容为你的域名(格式为xxx.com)。</br>
+然后在仓库的点击setting后点击page然后 找到custom domain然后添加域名并save。</br>
+然后依次输入命令`hexo c`,`hexo g`,`hexo d`,之后就可以用你的域名访问了。</P>
+
+
+
+<h3 class="postcontain-second">5.8、我遇到的问题</h3>
+<P class="postcontain-contain"> 1，在本地预览可以看到主题，但是推到github上就看不到主题了。</br>
+解决</br>
+将博客文件夹根目录下的config.yml文件的url部分添加代码</br>
+<pre><code>
+url: https://github.com/用户名/用户名.github.io
+root: /
+</code></pre>  
+然后再推一次就行了。</br>
+2，`hexo d`后出现提示</br>
+<pre><code>
+fatal: unable to access 'https://github.com/xulefat/xulefat.github.io.git/': Failed to connect to github.com port 443 after 21066 ms: Couldn't connect to server
+</code></pre>  
+解决</br>
+将博客文件夹根目录下的config.yml文件的url部分添加代码</br>
+<pre><code>
+url: https://github.com/用户名/用户名.github.io
+root: /
+</code></pre>  
+就好了。</br>
+</P>
+<h2 class="postcontain-first">6、hexo方案结尾</h2>
+<P class="postcontain-contain"> 到了这里，就可以得到一个博客网站了。hexo方案结束。
+</P>
+
+
+            <div id="footer" >
+                <HR class="copy-right">
+                <p class="copy-right">Copyright &copy; Xule.All right reserve</p>
+                <HR class="copy-right">
+            </div>
+        </div>
+    </body>
+    </html>

@@ -8,6 +8,9 @@
         <link rel="stylesheet" type="text/css" href="/rizhi/style.css">
 
       
+        <link href="https://cdn.bootcss.com/highlight.js/9.12.0/styles/atom-one-dark.min.css" rel="stylesheet">
+        <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+        <script >hljs.initHighlightingOnLoad();</script> 
 
     </head>
     <body>
@@ -20,9 +23,98 @@
                 <a class="navigation-bar" href="/youlian">友链</a>
                 </div>
             <div id="main">
-               
-             
+                <h1 id="posttitle" style=" margin-bottom: 5px;">博客折腾（4）简单自建网站方案</h1>
+ <span id="postmate"><span>日期:23/8/23|字数:3320个字符</span></span>    
+                     
+                <h2 class="postcontain-first">1、一个页面网站（个人主页</h2>
 
+                           
+                <P class="postcontain-contain">首先要写一个html页面，然后部署在服务器上。</P>
+               
+                 <h3 class="postcontain-second">1.1、写一个html页面</h3>
+               <P class="postcontain-contain">如果会html的话，很简单，不会的话可以参考别人的是怎么写的。就一个页面，懒一点css和，js，html写在一起就行了。</P>
+                 <h3 class="postcontain-second">1.2、部署</h3>
+                <P class="postcontain-contain">首先用xshell登陆上服务器，在服务器上安装Nginx，然后用xftp把页面上传到Nginx的html目录下就好了。访问不了就看看端口和安全组的问题。
+               或者放到github上，省事。</P>
+                <h2 class="postcontain-first">2、个人主页结尾</h2>
+                <P class="postcontain-contain"> 很简单，就一个页面。
+               </P>
+               <h2 class="postcontain-first">3、多个页面网站</h2>
+
+                           
+
+               <h3 class="postcontain-second">3.1、概况</h3>
+             <P class="postcontain-contain">在本地把写好的网站项目放Nginx的html目录下，然后打开Nginx，就可以去浏览器中输入localhost:80预览网站，然后一边预览一边边写。</br>
+             完成网站项目后，放到github上或者你的服务器上，就可以对外访问了。</br>
+             因为域名解析到大陆的服务器要备案，所有我把网站放到了github上，并且自定义了域名。</P>
+               <h3 class="postcontain-second">3.2、项目结构</h3>
+              <P class="postcontain-contain">我的项目结构如下
+             
+            <code><pre>
+             ├── guanyu
+             ├── wenzhang    
+             ├── youlian       
+             ├── rizhi
+             ├── siteicon.png   
+             ├── index.html
+             ├── style.css 
+             └── images       
+            </code></pre> 
+             然后，其实会一点前端三剑客就能写了，写完放到github page上就行。
+             ok，就这样了。</P>
+             
+              <h3 class="postcontain-second">3.3域名解析</h3>
+             <P class="postcontain-contain">填三个就行，一是主机记录，记录类型，记录值。</br>
+             这三个空在域名解析是有得看的，按照自己需求照着提示填就完事了。
+             </P>
+             
+             
+               
+              
+             
+             
+             
+               <h3 class="postcontain-second">3.4，脚部如何固定在页面底部</h3>
+              <P class="postcontain-contain"> 对于这样的结构。</br>
+                <code><pre>
+                    &lt;!DOCTYPE html>
+                    &lt;html lang="en">
+                    &lt;head>
+                        &lt;meta charset="UTF-8">
+                        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0">
+                        &lt;title>Document&lt;/title>
+                    &lt;/head>
+                    &lt;body>
+                        &lt;div id="container">
+                            &lt;div id="header">&lt;/div>
+                            &lt;div id="main">&lt;/div>
+                            &lt;div id="footer">&lt;/div>
+                        &lt;/div>    
+                    &lt;/body>
+                    &lt;/html>
+                </code></pre> 
+             
+             如何使脚部固定在页面底部？</br>
+             
+             
+             
+             用position属性将脚部进行定位，这里我用position:absolute属性且数据取正（元素使用了position:absolute属性后。该元素会脱离正常文档流，漂浮在页面上。数据取正意味着脚部的定位范围只能在container盒子四条边内）。
+             用container作为脚部的锚点。因为container内容的会发生变化（比如，如果container里有&lt;details>,点开&lt;details>时内容高度会增加，导致container盒子高度增加（前提是container高度属性为：height：auto，height：auto有“包裹性”，该元素的高度会随着子元素高度的变化而变化，而不是任由子元素突破盒子。）。），使得container的盒子可能超出页面高度，也可能没有超出页面高度。</br>
+             当container的盒子高度超出页面高度时，用container做锚点解决了如果container盒子的高度超出页面的高度时container的内容可能会与脚部的内容发生重合的问题。（注意container最下面的子元素的padding要留下至少能够放下脚部的高度。）</br>
+             当container盒子的高度小于页面的高度时，会发现脚部是不在页面底部的(因为container盒子的高度小于页面高度，定位范围在container盒子四条边内的脚部肯定不在页面底部啦。)。所以，只要让container盒子的高度至少等于页面的高度就OK了。</br>
+             怎么办？先让&lt;html>的盒子获取页面的高度（给html加上hight:100%属性可以使&lt;html>盒子的高度等于页面的初始高度。）再让container继承&lt;html>的盒子高度。因为除了&lt;html>外，其他元素使用height:百分比或min-height:百分比属性后，该元素会继承一个最近的设定了固定高度或者是一个有效百分比高度的父元素的高度。所以先给&lt;body>加上hight:100%属性，然后再给container加上min-hight:100%属性（min-height的元素会使内容的高度低于min-height设置的高度时把高度增加到min-height设置的高度,或者说，当内容的高度低于min-height设置的高度时，使用min-height属性设置的高度，而不是height属性设置的高度;当内容的高度大于min-height设置的高度时就采用height设置的高度。）（因为如果给container加上hight:100%属性，会把container的高度写死了，这样相当于把脚部也写死了，且hight:100%属性没有“包裹性”，当子元素高度发生变化时会突破container盒子的高度，而脚部还是在（写死在）container盒子的四条边内，导致写死了的脚部与该子元素发生重合。），这样就可以使container盒子的高度的最小值等于页面的高度，而当container在子元素的高度增并大于min-hight:100%（页面高度）时，container盒子的高度也随之增高。这样，脚部就可以固定在页面底部了。</br>
+             
+             补充：height:百分比和min-height:百分比属性是会继承一个设置了固定高度或者是一个有效百分比高度的父元素的高度。
+             </P>
+             <h3 class="postcontain-second">3.5代码高亮</h3>
+<P class="postcontain-contain">用highlight.js实现代码高亮，下载不了的话，用cdn来搞方便一点。</br>
+hrml代码的“<”要用字符代码"&lt;"来代替，不然页面上是显示吧了html的。
+</P>
+
+              <h2 class="postcontain-first">4、简单的多页面网站方案结尾</h2>
+              <P class="postcontain-contain">  ok，这样就得到了一个简单的网站了。
+             
+             </P>
 
             <div id="footer" >
                 <HR class="copy-right">
